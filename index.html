@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Consultez la météo de n'importe quelle ville du monde.">
+
+    <title>Météo Monde | Application météo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <header class="app-header">
+            <h1>🌍 Météo Monde</h1>
+            <p>La météo du monde au bout des doigts</p>
+        </header>
+
+        <section class="search-section">
+            <form id="weather-form">
+                <label for="city-input">Rechercher une ville</label>
+
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="city-input"
+                        placeholder="Exemple : Dakar, Paris, Londres..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Rechercher
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <p id="status-message" role="status" aria-live="polite"></p>
+
+        <section id="weather-card" class="weather-card hidden">
+
+            <div class="weather-main">
+                <h2 id="city-name">Dakar, Sénégal</h2>
+
+                <p id="weather-description">Ensoleillé</p>
+
+                <div class="temperature">
+                    <span id="weather-icon">☀️</span>
+                    <span id="temperature">30</span>
+                    <span class="degree">°C</span>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="detail-box">
+                    <span class="detail-icon">💧</span>
+                    <p>Humidité</p>
+                    <strong id="humidity">-- %</strong>
+                </div>
+
+                <div class="detail-box">
+                    <span class="detail-icon">💨</span>
+                    <p>Vitesse du vent</p>
+                    <strong id="wind-speed">-- km/h</strong>
+                </div>
+
+            </div>
+
+        </section>
+<section id="forecast-section" class="forecast-section hidden">
+    <h2>Prévisions sur 5 jours</h2>
+
+    <div id="forecast-container" class="forecast-container">
+    </div>
+</section>
+        <footer class="app-footer">
+            <p>Application météo réalisée en HTML, CSS et JavaScript.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
